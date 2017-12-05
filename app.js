@@ -1,4 +1,4 @@
 // const Contexto = require('./entity/Contexto.js');
-var Contexto = require('./entity/Contexto');
+var Contexto = require('./Contexto');
 
 var contexto = new Contexto("", "", "", "");
