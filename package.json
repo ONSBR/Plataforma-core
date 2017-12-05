@@ -1,0 +1,21 @@
+{
+  "name": "plataforma-core",
+  "version": "1.0.0",
+  "description": "plataforma-core",
+  "main": "app.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ONSBR/Plataforma-core.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ONSBR/Plataforma-core/issues"
+  },
+  "homepage": "https://github.com/ONSBR/Plataforma-core#readme"
+}
