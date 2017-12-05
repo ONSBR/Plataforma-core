@@ -1,5 +1,4 @@
 class Evento {
-
     constructor(name, data, instancia, responsavel, payload) {
         this.name = name;
         this.data = data;
@@ -7,7 +6,6 @@ class Evento {
         this.responsavel = responsavel;
         this.payload = payload;
     }
-
 }
 
 module.exports = Evento;

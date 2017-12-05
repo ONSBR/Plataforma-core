@@ -1,5 +1,3 @@
-
-
 class Contexto {
     
     constructor(evento, instancia, dataSet, dataDeReferencia){
