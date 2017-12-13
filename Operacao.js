@@ -1,10 +1,11 @@
 class Operacao {
 
-    constructor(nome, eventosDeEntrada, eventosDeSaida, processo) {
-        this.nome;
-        this.eventosDeEntrada;
-        this.eventosDeSaida;
-        this.processo;
+    constructor(arquivo, metodo, eventosDeEntrada, eventosDeSaida, processo) {
+        this.arquivo = arquivo;
+        this.metodo = metodo;
+        this.eventosDeEntrada = eventosDeEntrada;
+        this.eventosDeSaida = eventosDeSaida;
+        this.processo = processo;
     }
 
 }
