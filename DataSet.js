@@ -1,14 +1,11 @@
 class DataSet {
 
     constructor(){
-        this.entities = new Map();
-        this.entities.set("clients", []);
-        this.entities.set("accounts", []);
+        this.entities = [];
     }
 
     save(entity) {
-        this.entities.get("clients").push(entity.titular);
-        this.entities.get("accounts").push(entity.saldo);
+        this.entities.push(entity.titular);
     }
 
     update(entity) {
