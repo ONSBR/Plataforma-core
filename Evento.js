@@ -1,12 +1,13 @@
 class Evento {
-    constructor(name, processName, data, instancia, responsavel, payload, origem) {
+    constructor(name, processName, dataDoEvento, instancia, responsavel, payload, origem, dataRef) {
         this.name = name;
         this.processName = processName;
-        this.data = data;
+        this.dataDoEvento = dataDoEvento;
         this.instancia = instancia;
         this.responsavel = responsavel;
         this.payload = payload;
         this.origem = origem;
+        this.dataRef = dataRef;
     }
 }
 
