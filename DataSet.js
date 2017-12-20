@@ -1,15 +1,11 @@
 class DataSet {
 
     constructor(){
-        this.entities = new Map();
+        this.entities = [];
     }
 
     save(entity, entityType) {
-        if(this.entities.get(entityType) == undefined) {
-            this.entities.set(entityType, [entity]);
-        } else {
-            this.entities.get(entityType).push(entity);
-        }
+        this.entities.push(entity);
     }
 
     update(entity) {
