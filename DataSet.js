@@ -1,3 +1,5 @@
+var EntityMetadata = require("./EntityMetadata");
+
 class DataSet {
 
     constructor(){
@@ -5,13 +7,13 @@ class DataSet {
     }
 
     save(entity, entityType) {
+        entity.entityMetadata= new EntityMetadata(entityType, "create");
         this.entities.push(entity);
     }
 
-    update(entity) {
-    }
-
-    delete(entity) {
+    update(entity, entityType) {
+        entity.entityMetadata= new EntityMetadata(entityType, "update");
+        this.entities.push(entity);
     }
 }
 
