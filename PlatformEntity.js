@@ -1,7 +1,10 @@
+var EntityMetadata = require("./EntityMetadata");
+
 class PlatformEntity {
 
     constructor(entityMetadata) {
-        this.entityMetadata = entityMetadata;
+        this._metadata = new EntityMetadata();
+        this._metadata.type = this.constructor.name;
     }
 
 }

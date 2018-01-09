@@ -7,12 +7,12 @@ class DataSet {
     }
 
     save(entity, entityType) {
-        entity.entityMetadata= new EntityMetadata(entityType, "create");
+        entity._metadata = new EntityMetadata(entityType, "create");
         this.entities.push(entity);
     }
 
     update(entity, entityType) {
-        entity.entityMetadata= new EntityMetadata(entityType, "update");
+        entity._metadata.changeTrack = "update";
         this.entities.push(entity);
     }
 }
