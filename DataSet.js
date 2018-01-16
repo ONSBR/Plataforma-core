@@ -8,8 +8,6 @@ const CHANGETRACK_DELETE = "delete";
 class DataSet {
 
     constructor(){
-
-
         this.entities = [];
     }
 
@@ -18,10 +16,8 @@ class DataSet {
         this._validateEntity(entity);
         this._validateEntityType(entityType);    
 
-        var collectionType = this._createOrGetCollection(entityType);
-
         entity._metadata = new EntityMetadata(entityType, CHANGETRACK_CREATE);
-        collectionType.push(entity);
+        this.entities.push(entity);
     }
 
     update(entity) {
@@ -43,31 +39,13 @@ class DataSet {
     queryable(entityType) {
 
         this._validateEntityType(entityType);    
-        return Enumerable.from(this._createOrGetCollection(entityType)).where(
-            function(item) { return item._metadata.changeTrack != CHANGETRACK_DELETE; }
+        return Enumerable.from(this.entities).where(
+            function(item) { 
+                return item._metadata.type == entityType 
+                        && item._metadata.changeTrack != CHANGETRACK_DELETE; 
+            }
         );
     }
-
-    _loadOrReplaceCollection(collect, entityType) {
-        
-        this._validateEntityType(entityType);    
-        
-        // TODO proderia validar se todas entidades da lista tem metadados
-        
-        if (collect) {
-            this.entities[entityType] = collect;
-        }
-    }
-
-    _createOrGetCollection(entityType) {
-        
-        var retorno = this.entities[entityType];
-        if (!retorno) {
-            retorno = [];
-            this.entities[entityType] = retorno;
-        } 
-        return retorno;
-    }   
 
     _validateEntity(entity) {
         if (!entity) {
