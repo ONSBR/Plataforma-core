@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "plataforma-core",
   "main": "app.js",
-  "dependencies": {},
+  "dependencies": {
+    "linq": "^3.0.9"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "test"
